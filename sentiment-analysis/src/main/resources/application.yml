@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: sentiment-analyzer
+  profiles:
+    active: dev

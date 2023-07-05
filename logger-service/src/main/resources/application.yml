@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: logger-service
+  profiles:
+    active: dev

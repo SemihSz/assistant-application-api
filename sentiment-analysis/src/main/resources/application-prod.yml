@@ -1,0 +1,36 @@
+logging:
+  level.*:
+    org.springframework.web.client.RestTemplate: DEBUG
+    com.kandilliapi.earthquakekandilli: DEBUG
+  file:
+    name: logs/trading-crypto.log
+
+server:
+  port: 8091
+  servlet:
+    context-path: /trading-crypto
+
+spring:
+  jpa:
+    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:postgresql://localhost:5432/crypto
+    driverClassName: org.postgresql.Driver
+    username: postgres
+    password: pass
+
+
+crypto-api:
+  coinmarketcap: 5e326a7d-41e5-4604-85d5-0e4a21712753
+  coincgecko: https://api.coingecko.com/api/v3/coins/markets
+
+error-internal-mail:
+  active: true
+  address: denemespringdeneme@gmail.com
+
+cache:
+  expire:
+    time: 5

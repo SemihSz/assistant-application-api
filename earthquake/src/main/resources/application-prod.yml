@@ -1,0 +1,43 @@
+logging:
+  level:
+    org.springframework.web.client.RestTemplate: DEBUG
+    com.kandilliapi.earthquakekandilli: DEBUG
+  file:
+    name: logs/earth-quake.log
+
+server:
+  port: 8090
+  servlet:
+    context-path: /earth-quake
+
+kandilli-url: http://www.koeri.boun.edu.tr/scripts/lst0.asp
+afad-urls: https://son-depremler.herokuapp.com/sondepremler
+afad-url: https://deprem.afad.gov.tr/latestCatalogsList
+world-earthquake:
+  general-url: https://earthquake.usgs.gov/fdsnws/event/1/query.geojson?
+  significant-url: https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_month.geojson
+
+spring:
+  jpa:
+    show-sql: false
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: ${SPRING_DATABASE_URL}
+    driverClassName: org.postgresql.Driver
+    username: ${SPRING_DATABASE_USERNAME}
+    password: ${SPRING_DATABASE_PASS}
+
+
+error-internal-mail:
+  active: true
+  address: denemespringdeneme@gmail.com
+
+admin-privilege:
+  token: eMHO384PkvADTBwMosYwa15C8vynY2uN
+  second-token: aHZ2wUflP6WYa4hAnuoCdCsVivmaa6wG
+
+cache:
+  expire:
+    time: 5

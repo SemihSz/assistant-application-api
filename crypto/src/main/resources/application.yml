@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: trading-crypto-api
+  profiles:
+    active: dev

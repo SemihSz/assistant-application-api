@@ -1,0 +1,9 @@
+# Project exclude paths
+/common-api/target/
+/crypto/target/
+/earthquake/target/
+/eureka-server/target/
+/sentiment-analysis/target/
+/target/
+# Project exclude paths
+/logger-service/target/
